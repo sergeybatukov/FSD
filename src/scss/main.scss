@@ -2,5 +2,8 @@
 @import "utils/mixins";
 @import "utils/fonts";
 
-// Modules
+h1 {
+    font-family: "Montserrat";
+}
+    // Modules
 @import "modules/footer.scss";
