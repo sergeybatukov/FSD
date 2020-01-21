@@ -1,15 +1,16 @@
 const path = require('path')
 const MiniCssExtractPlagin = require('mini-css-extract-plugin')
-
+const HtmlWebPackPlugin = require('html-webpack-plugin')
+const CopyWebpackPlugin = require('copy-webpack-plugin')
 
 module.exports = {
     entry: {
         app: './src/index.js'
     },
     output: {
-        filename: '[name].js',
+        filename: 'assets/[name].js',
         path: path.resolve(__dirname, './dist'),
-        publicPath: '/dist'
+        publicPath: '/'
     },
 
     module: {
@@ -17,6 +18,13 @@ module.exports = {
             test: /\.js/,
             loader: 'babel-loader',
             exclude: '/node_modules/'
+        },
+        {
+            test: /\.(png|jpg|gif|svg)/,
+            loader: 'file-loader',
+            options:{
+                name: "[name].[ext]"
+            }
         },
         {
             test: /\.css/,
@@ -60,11 +68,20 @@ module.exports = {
     },
 
     devServer: {
+        contentBase: './dist',
         overlay: true
     },
     plugins: [
         new MiniCssExtractPlagin({
-            filename: "[name].css"
-        })
+            filename: "assets/[name].css"
+        }),
+        new HtmlWebPackPlugin({
+            hash: false,
+            template: 'src/index.html',
+            filename: './index.html'
+        }),
+        new CopyWebpackPlugin([
+            {from: 'src/img/', to: 'assets/img'}
+        ]) 
     ]
 }
