@@ -12,7 +12,7 @@
         border: 1px solid $Dark_shade_25;
         box-sizing: border-box;
         border-radius: 4px;
-        &:focus{
+        &:focus:hover{
             border: 1px solid $Dark_shade_50;
         }
     }

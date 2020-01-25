@@ -1,0 +1,21 @@
+mixin button(text, mod, appearance)
+    - mod=mod+'__button'
+    case appearance
+        when 0
+            button(class=mod+' '+'button', type='button')=text
+        when 1
+            button(class=mod+' '+'button__hollow', type='button')=text
+        when 2
+            button(class=mod+' '+'button', type='button', style='opacity: 0.5')=text
+        when 3
+            button(class=mod+' '+'button__hollow button__hollow__inactive', type='button')=text
+        default
+            button(class=mod+' '+'button', type='button')=text
+
+//- text: текст кнопки
+    mod: класс модификатор
+    appearance: внешний вид кнопки
+        0 - с градиентной заливкой
+        1 - 'полая'
+        2 - с градиентной заливкой(неактивная)
+        3 - 'полая'(неактивная)

@@ -1,16 +1,16 @@
 mixin text-field (text, mod, placeHolder, switch_label)
-    - mod=' '+mod
+    - mod=mod+"__text-field"
     case switch_label
         when 0
-            .text-field
-                input(class='text-field'+mod, placeholder=placeHolder)
+            div(class=mod+' '+'text-field')
+                input(class='text-field', placeholder=placeHolder)
         when 1
-            .text-field
-                h3(class='text-field__label'+mod)=text
-                input(class='text-field__input'+mod, placeholder=placeHolder)
+            div(class=mod+' '+'text-field')
+                h3(class='text-field__label')=text
+                input(class='text-field__input', placeholder=placeHolder)
         default
-            .text-field
-                input(class='text-field'+mod, placeholder=placeHolder)
+            div(class=mod+' '+'text-field')
+                input(class='text-field', placeholder=placeHolder)
 
 
 //- text - заголовок
