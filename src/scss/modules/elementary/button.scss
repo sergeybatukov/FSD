@@ -11,7 +11,7 @@
     text-transform: uppercase;
     &__hollow{
         @include h3;
-        left: 2px;
+        margin: 2px;
         position: relative;
         color: $Main_color;
         background: #FFFFFF;
@@ -22,7 +22,7 @@
         cursor: pointer;
         &::before{
             content: '';
-            padding: 2px 2px;
+            padding: 2px;
             display: block;
             width: 100%;
             height: 100%; 
