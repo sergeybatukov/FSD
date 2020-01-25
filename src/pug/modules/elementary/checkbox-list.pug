@@ -1,0 +1,5 @@
+mixin checkbox-list(id, mod, text)
+    - mod=mod+"__checkbox-list"
+    div(class=mod+' '+'checkbox-list')
+        input(class="checkbox-list__check", type="checkbox", id=id)
+        label(class="checkbox-list__label", for=id)=text
