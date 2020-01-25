@@ -1,8 +1,19 @@
 .text-field{
     &__label{
         @include h3;
+        margin-top: 0px;
+        margin-bottom: 5px;
     }
     &__input{
         @include input_text;
+        outline: none;
+        padding: 13px 15px;
+        background: #FFFFFF;
+        border: 1px solid $Dark_shade_25;
+        box-sizing: border-box;
+        border-radius: 4px;
+        &:focus{
+            border: 1px solid $Dark_shade_50;
+        }
     }
 }
