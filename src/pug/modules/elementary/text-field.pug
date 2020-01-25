@@ -1,0 +1,21 @@
+mixin text-field (text, mod, placeHolder, switch_label)
+    - mod=' '+mod
+    case switch_label
+        when 0
+            .text-field
+                input(class='text-field'+mod, placeholder=placeHolder)
+        when 1
+            .text-field
+                h3(class='text-field__label'+mod)=text
+                input(class='text-field__input'+mod, placeholder=placeHolder)
+        default
+            .text-field
+                input(class='text-field'+mod, placeholder=placeHolder)
+
+
+//- text - заголовок
+    mod - класс модивикатор
+    placeHolder - placeholder
+    swich_label:
+        0 - подпись выключена
+        1 - подпись включена

@@ -1,9 +1,6 @@
-@import "utils/vars";
+@import "utils/design-settings";
 @import "utils/mixins";
 @import "utils/fonts";
 @import "modules/blocks/header.scss";
-
-h1 {
-    font-family: "Montserrat";
-}
+@import "modules/elementary/text-field.scss";
 

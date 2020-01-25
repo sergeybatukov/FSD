@@ -4,3 +4,42 @@
     src: url('/assets/fonts/Montserrat/Montserrat-Medium.woff') format('woff'),
         url('/assets/fonts/Montserrat/Montserrat-Medium.ttf') format('truetype');
 }
+@font-face {
+    font-family: "CasperRegular";
+    src: url("/assets/fonts/Casper/CasperRegular/CasperRegular.eot");
+    src: url("/assets/fonts/Casper/CasperRegular/CasperRegular.eot?#iefix")format("embedded-opentype"),
+    url("/assets/fonts/Casper/CasperRegular/CasperRegular.woff") format("woff"),
+    url("/assets/fonts/Casper/CasperRegular/CasperRegular.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "CasperBold";
+    src: url("/assets/fonts/Casper/CasperBold/CasperBold.eot");
+    src: url("/assets/fonts/Casper/CasperBold/CasperBold.eot?#iefix")format("embedded-opentype"),
+    url("/assets/fonts/Casper/CasperBold/CasperBold.woff") format("woff"),
+    url("/assets/fonts/Casper/CasperBold/CasperBold.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "CasperItalic";
+    src: url("/assets/fonts/Casper/CasperItalic/CasperItalic.eot");
+    src: url("/assets/fonts/Casper/CasperItalic/CasperItalic.eot?#iefix")format("embedded-opentype"),
+    url("/assets/fonts/Casper/CasperItalic/CasperItalic.woff") format("woff"),
+    url("/assets/fonts/Casper/CasperItalic/CasperItalic.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "CasperBoldItalic";
+    src: url("/assets/fonts/Casper/CasperBoldItalic/CasperBoldItalic.eot");
+    src: url("/assets/fonts/Casper/CasperBoldItalic/CasperBoldItalic.eot?#iefix")format("embedded-opentype"),
+    url("/assets/fonts/Casper/CasperBoldItalic/CasperBoldItalic.woff") format("woff"),
+    url("/assets/fonts/Casper/CasperBoldItalic/CasperBoldItalic.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}

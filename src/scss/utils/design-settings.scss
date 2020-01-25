@@ -1,0 +1,57 @@
+
+// colors
+$Dark_shade_100                 :#1F2041;
+$Dark_shade_75                  :rgba(31, 32, 65, 0.75);
+$Dark_shade_50                  :rgba(31, 32, 65, 0.5);
+$Dark_shade_25                  :rgba(31, 32, 65, 0.25);
+$Dark_shade_5                   :rgba(31, 32, 65, 0.05);
+$Purple                         :#BC9CFF;
+$Green                          :#6FCF97;
+
+
+// text-settings:
+$header_font                    :"CasperBold";
+$font                           :"Montserrat";
+
+@mixin h1{
+    font-family: $header_font;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 30px;
+    color: $Dark_shade_100;
+}
+
+@mixin h2 {
+    font-family: $header_font;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 19px;
+    line-height: 24px;
+    color: $Dark_shade_100;
+}
+
+@mixin h3 {
+    font-family: $font;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 15px;
+    text-transform: uppercase;
+    color: $Dark_shade_100;
+}
+
+@mixin body_text {
+    font-family: $font;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 24px;
+    color: $Dark_shade_75;
+}
+
+@mixin input_text {
+    @include body_text;
+    line-height: 18px;
+    color: $Dark_shade_100;
+}

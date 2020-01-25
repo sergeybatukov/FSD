@@ -1,0 +1,8 @@
+.text-field{
+    &__label{
+        @include h3;
+    }
+    &__input{
+        @include input_text;
+    }
+}
