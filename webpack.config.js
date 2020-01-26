@@ -3,6 +3,7 @@ const fs = require('fs')
 const MiniCssExtractPlagin = require('mini-css-extract-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
+const webpack = require('webpack')
 
 const PATHS = {
     src: path.join(__dirname, '../FSD/src'),
@@ -104,6 +105,10 @@ module.exports = {
             {from: 'src/img/', to: 'assets/img'},
             {from: 'src/fonts/', to: 'assets/fonts'}
         ]),
+        new webpack.ProvidePlugin({
+            $: 'jquery',
+            jQuery: 'jquery'
+        }),
         ...PAGES.map(page => new HtmlWebpackPlugin({
             template: `${PAGES_DIR}/${page}`,
             filename: `./${page.replace(/\.pug/,'.html')}`
