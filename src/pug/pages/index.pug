@@ -6,9 +6,13 @@ block content
         +button('click me','UI', 1)
         +button('click me','UI', 2)
         +button('click me','UI', 3)
-        +checkbox-list('1', 'UI', 'Завтрак')
-        +checkbox-list('2', 'UI', 'Письменный стол')
-        +checkbox-list('3', 'UI', 'Стул для кормления')
-        +checkbox-list('4', 'UI', 'Кроватка')
-        +checkbox-list('5', 'UI', 'Телевизор')
-        +checkbox-list('6', 'UI', 'Шампунь')
+        
+        .UI__checkbox-list.checkbox-list
+            h3(class="checkbox-list checkbox-list__header checkbox-list__header__rotate") expandable checkbox list
+            .checkbox-list__container
+                +checkbox('1', 'checkbox-list', 'Завтрак')
+                +checkbox('2', 'checkbox-list', 'Письменный стол')
+                +checkbox('3', 'checkbox-list', 'Стул для кормления')
+                +checkbox('4', 'checkbox-list', 'Кроватка')
+                +checkbox('5', 'checkbox-list', 'Телевизор')
+                +checkbox('6', 'checkbox-list', 'Шампунь')
