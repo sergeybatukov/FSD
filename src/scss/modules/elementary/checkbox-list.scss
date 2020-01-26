@@ -1,10 +1,13 @@
-.checkbox-list{
+.checkbox{
     position: relative;
+    
     &__check{
         position: absolute;
         appearance: none;
     }
     &__label{
+        margin-bottom: 10px;
+        margin-left: 10px;
         @include body_text;
         padding-left: 30px;
         padding-top: 1px;
@@ -18,10 +21,10 @@
             background-color: white;
             box-sizing: border-box;
             border-radius: 4px;
-
+            
             position: absolute;
             top: 0px;
-            left: 0px;
+            left: 10px;
             z-index: 1;
         }
         &::after{
@@ -35,14 +38,51 @@
 
             position: absolute;
             top: 4px;
-            left: 5px;
+            left: 15px;
             z-index: 2;
         }
     }
 }
-.checkbox-list__check:checked + .checkbox-list__label:before {
+.checkbox__check:checked + .checkbox__label:before {
     border: 1px solid $Main_color;
 }
-.checkbox-list__check:checked + .checkbox-list__label::after {
+.checkbox__check:checked + .checkbox__label::after {
     opacity: 1;
+}
+
+.checkbox-list{
+    position: relative;
+    &__header{
+        cursor: pointer;
+        @include h3;
+        position: relative;
+        height: 12px;
+        display: block;
+        padding: 16px 10px;
+        &::after{
+            content: "";
+            display: block;
+            width: 44px;
+            height: 44px;
+            background: url('/assets/img/expand_more.svg') no-repeat;
+            background-position: center;
+            position: absolute;
+            top: 0px;
+            right: 0px;
+            z-index: 2;
+        }
+        &__rotate::after{
+            animation-duration: 0.4s;
+            animation-name: rotate;
+            transform: rotate(180deg);
+        }
+    }
+}
+@keyframes rotate{
+    from{
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(180deg);
+    }
 }

@@ -1,3 +1,6 @@
 import './js/common'
 import './scss/main.scss'
-import jQuery from 'jQuery'
+
+import jquery from 'jquery'
+import $ from 'jquery'
+import './js/checkbox-list'
