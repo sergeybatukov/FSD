@@ -1,0 +1,5 @@
+mixin like-button(id,nam, mod)
+    - mod=mod+"__like-button"
+    div(class=mod+' '+'like-button')
+        input(class="like-button__input", type="checkbox", id=id)
+        label(class="like-button__label", for=id)=nam

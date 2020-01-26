@@ -1,0 +1,63 @@
+.like-button{
+    position: relative;
+    
+    &__input{
+        position: absolute;
+        appearance: none;
+    }
+    &__label{
+        position: relative;
+        height: 20px;
+        width: 15px;
+        display: block;
+        padding-left: 25px;
+        padding-top: 4px;
+
+        font-family: $Main_font;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 10px;
+        line-height: 12px;
+        color: rgba(31, 32, 65, 0.25);
+        
+        &::before{
+            content: "";
+            display: block;
+            width: 40px;
+            height: 20px;
+            border: 1px solid rgba(31, 32, 65, 0.25);
+            
+            box-sizing: border-box;
+            border-radius: 10px;
+            
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            z-index: 1;
+
+            transition: border .2s linear;
+        }
+        &::after{
+            content: "";
+            display: block;
+            width: 10px;
+            height: 10px;
+            background: url('/assets/img/favorite_border.svg') no-repeat;
+
+            position: absolute;
+            top: 6px;
+            left: 5px;
+            z-index: 2;
+            transition: background .2s linear;
+        }
+    }
+}
+.like-button__input:checked + .like-button__label:before {
+    border: 1px solid $Main_color;
+}
+.like-button__input:checked + .like-button__label::after {
+    background: url('/assets/img/favorite.svg') no-repeat;
+}
+.like-button__input:checked + .like-button__label {
+    color: $Main_color;
+}
