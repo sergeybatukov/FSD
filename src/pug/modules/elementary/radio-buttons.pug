@@ -1,0 +1,9 @@
+mixin radio-buttons(text1, id1, text2, id2, name, mod)
+    - mod = mod+"__radio-buttons"
+    div(class=mod+" "+"radio-buttons")
+        div(class="radio-buttons__item")
+            input(class="radio-buttons__input", type="radio", name=name, id=id1)
+            label(class="radio-buttons__label", for=id1)=text1
+        div(class="radio-buttons__item")
+            input(class="radio-buttons__input", type="radio", name=name, id=id2)
+            label(class="radio-buttons__label", for=id2)=text2

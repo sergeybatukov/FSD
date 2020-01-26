@@ -1,7 +1,7 @@
 extends ../layout/main
 block content
     .UI__form.form
-        +text-field('Текст', 'UI', 'Email', 1)
+        +text-field('text field', 'UI', 'Email', 1)
         +button('click me','UI', 0)
         +button('click me','UI', 1)
         +button('click me','UI', 2)
@@ -16,3 +16,5 @@ block content
                 +checkbox('4', 'checkbox-list', 'Кроватка')
                 +checkbox('5', 'checkbox-list', 'Телевизор')
                 +checkbox('6', 'checkbox-list', 'Шампунь')
+        h3 Radio Buttons        
+        +radio-buttons("Мужчина", "m", "Женшина", "w", "male", "UI")
