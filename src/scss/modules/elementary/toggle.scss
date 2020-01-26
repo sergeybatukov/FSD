@@ -1,0 +1,52 @@
+.toggle{
+    position: relative;
+    
+    &__input{
+        position: absolute;
+        appearance: none;
+    }
+    &__label{
+        @include body_text;
+        padding-left: 50px;
+        padding-top: 1px;
+        display: block;
+        &::before{
+            content: "";
+            display: block;
+            width: 40px;
+            height: 20px;
+            border: 1px solid rgba(31, 32, 65, 0.25);
+            background-color: white;
+            box-sizing: border-box;
+            border-radius: 10px;
+            
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            z-index: 1;
+
+            transition: border .2s linear;
+        }
+        &::after{
+            content: "";
+            display: block;
+            width: 12px;
+            height: 12px;
+            background-color: rgba(31, 32, 65, 0.25);;
+            border-radius: 10px;
+
+            position: absolute;
+            top: 4px;
+            left: 4px;
+            z-index: 2;
+            transition: left .2s linear;
+        }
+    }
+}
+.toggle__input:checked + .toggle__label:before {
+    border: 1px solid $Main_color;
+}
+.toggle__input:checked + .toggle__label::after {
+    background-color: $Main_color;
+    left: 24px;
+}

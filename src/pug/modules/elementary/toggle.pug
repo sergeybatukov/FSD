@@ -1,0 +1,5 @@
+mixin toggle(text, id, name, mod)
+    - mod = mod+"__toggle"
+    div(class=mod+" "+"toggle")
+        input(class="toggle__input", type="checkbox", name=name, id=id)
+        label(class="toggle__label", for=id)=text

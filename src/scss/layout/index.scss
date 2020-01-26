@@ -1,15 +1,9 @@
 .UI{
-    &__text-field{
-        margin: 10px;
-    }
-    &__button {
+    &__text-field, &__button, &__radio-buttons, &__toggle{
         margin: 10px;
     }
     &__checkbox-list{
         margin: 0px;
-    }
-    &__radio-buttons{
-        margin: 10px
     }
 }
 h3{
