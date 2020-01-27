@@ -1,0 +1,10 @@
+mixin rating (val, mod)
+    - mod = mod+"__rating"
+    div(class=mod+" "+"rating")
+        .rating__on(style="width: "+val+"%;")
+        .rating__live
+            span(data-rate="1")
+            span(data-rate="2")
+            span(data-rate="3")
+            span(data-rate="4")
+            span(data-rate="5")

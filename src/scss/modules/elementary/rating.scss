@@ -1,0 +1,38 @@
+.rating {
+    position: relative;
+    display: block;
+    float: left;
+    height: 24px;
+    width: 120px;
+    background-image: url("/assets/img/star_border.svg");
+}
+.rating{
+    &__on {
+        height: 24px;
+        background-image: url("/assets/img/star.svg");
+    }
+    &__live {
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        span {
+            display: block;
+            float: left;
+            cursor: pointer;
+            width: 24px;
+            height: 24px;
+            background-image: url("/assets/img/star.svg");
+            background-repeat: no-repeat;
+        }
+    }
+}
+
+.rating__live span:hover ~ span {
+    background-image: url("/assets/img/star_border.svg");
+    background-repeat: no-repeat;
+    // 0
+}
+.rating__live:hover {
+    opacity: 1;
+}
