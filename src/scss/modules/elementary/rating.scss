@@ -5,11 +5,14 @@
     height: 24px;
     width: 120px;
     background-image: url("/assets/img/star_border.svg");
+    z-index: 5;
 }
 .rating{
     &__on {
+        position: absolute;
         height: 24px;
         background-image: url("/assets/img/star.svg");
+
     }
     &__live {
         position: absolute;
@@ -31,8 +34,10 @@
 .rating__live span:hover ~ span {
     background-image: url("/assets/img/star_border.svg");
     background-repeat: no-repeat;
-    // 0
 }
 .rating__live:hover {
     opacity: 1;
+}
+.rating:hover .rating__on {
+    opacity: 0;
 }
