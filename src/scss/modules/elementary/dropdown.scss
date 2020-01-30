@@ -6,6 +6,9 @@
     background: #FFFFFF;
     border: 1px solid $Dark_shade_50;
     box-sizing: border-box;
+    &__border{
+        border-radius: 4px;
+    }
     &__value{
         padding: 13px 15px;
         color: $Dark_shade_75;
@@ -20,10 +23,7 @@
             top: 0px;
             right: 0px;
             z-index: 2;
-
-            animation-duration: 0.4s;
-            animation-name: rotateUp;
-            transform: rotate(0deg);
+            transform:rotate(180deg);
         }
         }
         
@@ -64,12 +64,10 @@
         right: 0px;
     }
     &__button{
-        margin-top: 20px;
-        margin-left: 15px;
-        margin-right: 7px;
+        margin-top: 13px;
         & + .button__text{
             position: absolute;
-            right: 0px;
+            right: 7px;
         }
     }
 
