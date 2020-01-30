@@ -1,0 +1,36 @@
+mixin dropdown (mod, content)
+    - mod = mod+"__dropdown"
+    if (content =='guests')
+        - val = 'Сколько гостей'
+        - nameOne = 'Взрослые'
+        - nameTwo = 'Дети'
+        - nameTree = 'Младенцы'
+    else
+        - val = 'Удобства номера'
+        - nameOne = 'Спальни'
+        - nameTwo = 'Кровати'
+        - nameTree = 'Ванные комнаты'
+
+    div(class=mod+" "+"dropdown")
+        .dropdown__value=val
+        .dropdown__list
+            .dropdown__item
+                .dropdown__item-name=nameOne 
+                .dropdown__buttons
+                    .dropdown__minus -
+                    .dropdown__item-val 0
+                    .dropdown__plus +
+            .dropdown__item
+                .dropdown__item-name=nameTwo 
+                .dropdown__buttons
+                    .dropdown__minus -
+                    .dropdown__item-val 0
+                    .dropdown__plus +
+            .dropdown__item
+                .dropdown__item-name=nameTree 
+                .dropdown__buttons
+                    .dropdown__minus -
+                    .dropdown__item-val 0
+                    .dropdown__plus +
+            +button("очистить", "dropdown", 5)
+            +button("применить", "dropdown", 4)

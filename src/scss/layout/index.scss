@@ -1,9 +1,14 @@
 .UI{
-    &__text-field, &__button, &__radio-buttons, &__toggle, &__like-button, &__rating{
+    &__text-field, &__button, &__radio-buttons, &__toggle, &__like-button, &__dropdown{
         margin: 10px;
     }
     &__checkbox-list{
         margin: 0px;
+    }
+    &__rating{
+        position: relative;
+        margin: 10px;
+        display: block;
     }
 }
 h3{

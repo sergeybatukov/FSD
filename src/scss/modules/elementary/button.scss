@@ -41,4 +41,16 @@
             
         }
     }
+    &__text{
+        @include h3;
+        position: relative;
+        color: $Main_color;
+        background: none;
+        border: none;
+        padding: 0;
+        cursor: pointer;
+        &__inactive{
+            color: $Dark_shade_25;
+        }
+    }
 }

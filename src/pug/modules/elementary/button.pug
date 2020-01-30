@@ -9,6 +9,10 @@ mixin button(text, mod, appearance)
             button(class=mod+' '+'button', type='button', style='opacity: 0.5')=text
         when 3
             button(class=mod+' '+'button__hollow button__hollow__inactive', type='button')=text
+        when 4
+            button(class=mod+' '+'button__text', type='button')=text
+        when 5
+            button(class=mod+' '+'button__text button__text__inactive', type='button')=text
         default
             button(class=mod+' '+'button', type='button')=text
 

@@ -1,15 +1,9 @@
-.rating {
-    position: relative;
+.rating{
     display: block;
-    float: left;
     height: 24px;
     width: 120px;
     background-image: url("/assets/img/star_border.svg");
-    z-index: 5;
-}
-.rating{
     &__on {
-        position: absolute;
         height: 24px;
         background-image: url("/assets/img/star.svg");
 
