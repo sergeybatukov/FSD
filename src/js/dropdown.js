@@ -1,12 +1,13 @@
 $(document).ready(function() {
 
 // Сворачивание всех dropdown
+
     $(".dropdown").children(".dropdown__list" ).slideToggle(0);
 
 // Переменные
 
-    var confort = $(".dropdown-comfort").children( ".dropdown__value" ).html()
-    var guests = $( ".dropdown__value" ).html()
+    var comfort = $(".dropdown-comfort").children( ".dropdown__value" ).html()
+    var guests = $(".dropdown-guests").children( ".dropdown__value" ).html()
     var val = 0
     var one = 0
     var two = 0
@@ -47,22 +48,23 @@ $(document).ready(function() {
 
 // Кнопка "Применить"
 
-    $(".dropdown__list .button__text:eq(1)").click(function(){
-        one = +$( ".dropdown__list .dropdown__item-val:eq(0)" ).html()
-        two = +$( ".dropdown__list .dropdown__item-val:eq(1)" ).html()
-        tree = +$( ".dropdown__list .dropdown__item-val:eq(2)" ).html()
+    $(".button__text").not(".button__text__inactive").click(function(){
+        block = $(this).closest('.dropdown')
+        one = +block.find(".dropdown__list .dropdown__item-val:eq(0)" ).html()
+        two = +block.find(".dropdown__list .dropdown__item-val:eq(1)" ).html()
+        tree = +block.find(".dropdown__list .dropdown__item-val:eq(2)" ).html()
         if (one == 0 && two== 0 && tree == 0){
-            $( ".dropdown__value" ).html(guests)
+            block.children( ".dropdown__value" ).html("guests")
         }
         else if(one+two >= 2 && one+two <=4){
-            $(".dropdown-guests").children( ".dropdown__value" ).html(one+two+" гостя")
+            block.children( ".dropdown__value" ).html(one+two+" гостя")
         }
         else if(one+two >= 5){
-            $(".dropdown-guests").children( ".dropdown__value" ).html(one+two+" гостей")
+            block.children( ".dropdown__value" ).html(one+two+" гостей")
         }
         else if(one+two == 1){
-            $(".dropdown-guests").children( ".dropdown__value" ).html(one+two+" гость")
-        }
+            block.children( ".dropdown__value" ).html(one+two+" гость")
+        } 
 
         $(this).closest(".dropdown__list" ).slideToggle(400);
         if ($(this).closest('.dropdown').hasClass('dropdown__border')){
@@ -74,9 +76,12 @@ $(document).ready(function() {
             
     });
 
-    $(".dropdown__list .button__text:eq(0)").click(function(){
-        $(".dropdown-guests").children( ".dropdown__value" ).html(guests)
-        $(".dropdown-guests .dropdown__item-val" ).html(0)
+// Кнопка "очистить"
+
+    $(".button__text__inactive").click(function(){
+        block = $(this).closest('.dropdown')
+        block.children( ".dropdown__value" ).html(guests)
+        block.find(".dropdown__item-val" ).html(0)
     });
 });
 
