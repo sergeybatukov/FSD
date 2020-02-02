@@ -48,13 +48,20 @@ $(document).ready(function() {
         else if(one+two == 1){
             $(".dropdown-guests").children( ".dropdown__value" ).html(one+two+" гость")
         }
+
+        $(this).closest(".dropdown__list" ).slideToggle(400);
+        if ($(this).closest('.dropdown').hasClass('dropdown__border')){
+            $(this).closest('.dropdown').removeClass('dropdown__border');
+        }
+        else{
+            $(this).closest('.dropdown').addClass('dropdown__border');
+        }
             
     });
     $(".dropdown__list .button__text:eq(0)").click(function(){
         $(".dropdown-guests").children( ".dropdown__value" ).html(text)
-        $(".dropdown-guests").children( ".dropdown__list .dropdown__item-val:eq(0)" ).html(0)
-        $(".dropdown-guests").children( ".dropdown__list .dropdown__item-val:eq(1)" ).html(0)
-        $(".dropdown-guests").children( ".dropdown__list .dropdown__item-val:eq(2)" ).html(0)
+        $(".dropdown-guests .dropdown__item-val" ).html(0)
+
     });
 });
 
