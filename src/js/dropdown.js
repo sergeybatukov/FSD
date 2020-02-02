@@ -54,18 +54,19 @@ $(document).ready(function() {
         two = +block.find(".dropdown__list .dropdown__item-val:eq(1)" ).html()
         tree = +block.find(".dropdown__list .dropdown__item-val:eq(2)" ).html()
         if (one == 0 && two== 0 && tree == 0){
-            block.children( ".dropdown__value" ).html("guests")
+            block.children( ".dropdown__value" ).html(guests)
         }
-        else if(one+two >= 2 && one+two <=4){
-            block.children( ".dropdown__value" ).html(one+two+" гостя")
-        }
-        else if(one+two >= 5){
-            block.children( ".dropdown__value" ).html(one+two+" гостей")
-        }
-        else if(one+two == 1){
-            block.children( ".dropdown__value" ).html(one+two+" гость")
-        } 
         if (one >= 1){
+            if(one+two >= 2 && one+two <=4){
+                block.children( ".dropdown__value" ).html(one+two+" гостя")
+            }
+            else if(one+two >= 5){
+                block.children( ".dropdown__value" ).html(one+two+" гостей")
+            }
+            else if(one+two == 1){
+                block.children( ".dropdown__value" ).html(one+two+" гость")
+            } 
+
             if ( tree == 1){
                 block.children( ".dropdown__value" ).append(", "+tree+" мледенец")
             }
@@ -78,7 +79,9 @@ $(document).ready(function() {
         }
         else {
             tree = 0
+            two = 0
             block.find(".dropdown__list .dropdown__item-val:eq(2)" ).html(0)
+            block.find(".dropdown__list .dropdown__item-val:eq(1)" ).html(0)
         }
 
 
