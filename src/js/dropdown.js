@@ -65,6 +65,22 @@ $(document).ready(function() {
         else if(one+two == 1){
             block.children( ".dropdown__value" ).html(one+two+" гость")
         } 
+        if (one >= 1){
+            if ( tree == 1){
+                block.children( ".dropdown__value" ).append(", "+tree+" мледенец")
+            }
+            else if ( tree >= 2 && tree <=4){
+                block.children( ".dropdown__value" ).append(", "+tree+" мледенеца")
+            }
+            else if ( tree >= 5){
+                block.children( ".dropdown__value" ).append(", "+tree+" мледенецев")
+            }
+        }
+        else {
+            tree = 0
+            block.find(".dropdown__list .dropdown__item-val:eq(2)" ).html(0)
+        }
+
 
         $(this).closest(".dropdown__list" ).slideToggle(400);
         if ($(this).closest('.dropdown').hasClass('dropdown__border')){
