@@ -94,6 +94,38 @@ $(document).ready(function() {
         block.children( ".dropdown__value" ).html(guests)
         block.find(".dropdown__item-val" ).html(0)
     });
+
+// Поле ввода для "Удобства"
+
+    $(".dropdown-comfort").find(".dropdown__buttons").click(function(){
+        block = $(this).closest('.dropdown')
+        one = +block.find(".dropdown__list .dropdown__item-val:eq(0)" ).html()
+        two = +block.find(".dropdown__list .dropdown__item-val:eq(1)" ).html()
+        tree = +block.find(".dropdown__list .dropdown__item-val:eq(2)" ).html()
+        str = []
+
+        if (one == 0 && two== 0 && tree == 0){
+            block.children( ".dropdown__value" ).html(comfort)
+        }
+        else{
+            if (one >= 1){
+                str.push(one+ending(one, [' спальня', ' спальни', ' спален']))
+            }
+            if (two >= 1 && one == 0){
+                str.push(two+ending(two, [' кровать', ' кровати', ' кроватей']))
+            }
+            else if (two >= 1 && one >= 1){
+                str.push(", "+two+ending(two, [' кровать', ' кровати', ' кроватей']))
+            }
+            if (tree >= 1 && two == 0 && one == 0){
+                str.push(tree+ending(tree, [' ванная комната', ' ванных комнаты', ' ванных комнат']))
+            }
+            else if (tree >= 1 && (two >= 1 || one >= 1)){
+                str.push(", "+tree+ending(tree, [' ванная комната', ' ванных комнаты', ' ванных комнат']))
+            }
+            block.children( ".dropdown__value" ).html(str)
+        }
+    })
 });
 
 
