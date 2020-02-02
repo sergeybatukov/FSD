@@ -14,6 +14,7 @@
         padding: 13px 15px;
         color: $Dark_shade_75;
         &::after{
+            cursor: pointer;
             content: "";
             display: block;
             width: 44px;
@@ -43,6 +44,7 @@
         margin-top: 6px;
     }
     &__minus, &__plus {
+        cursor: pointer;
         position: relative;
         margin: 0 7px;
         font-family: $Main_font;
