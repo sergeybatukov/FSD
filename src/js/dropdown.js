@@ -1,5 +1,8 @@
 $(document).ready(function() {
-    var text = $( ".dropdown__value" ).html()
+    $(".dropdown-guests").children(".dropdown__list" ).slideToggle(0);
+    $(".dropdown-comfort").children(".dropdown__list" ).slideToggle(0);
+    var confort = $(".dropdown-comfort").children( ".dropdown__value" ).html()
+    var guests = $( ".dropdown__value" ).html()
     var val = 0
     var one = 0
     var two = 0
@@ -37,7 +40,7 @@ $(document).ready(function() {
         two = +$( ".dropdown__list .dropdown__item-val:eq(1)" ).html()
         tree = +$( ".dropdown__list .dropdown__item-val:eq(2)" ).html()
         if (one == 0 && two== 0 && tree == 0){
-            $( ".dropdown__value" ).html(text)
+            $( ".dropdown__value" ).html(guests)
         }
         else if(one+two >= 2 && one+two <=4){
             $(".dropdown-guests").children( ".dropdown__value" ).html(one+two+" гостя")
@@ -58,11 +61,12 @@ $(document).ready(function() {
         }
             
     });
-    $(".dropdown__list .button__text:eq(0)").click(function(){
-        $(".dropdown-guests").children( ".dropdown__value" ).html(text)
-        $(".dropdown-guests .dropdown__item-val" ).html(0)
 
+    $(".dropdown__list .button__text:eq(0)").click(function(){
+        $(".dropdown-guests").children( ".dropdown__value" ).html(guests)
+        $(".dropdown-guests .dropdown__item-val" ).html(0)
     });
 });
+
 
 
