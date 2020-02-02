@@ -46,6 +46,14 @@ $(document).ready(function() {
         }
     });
 
+// окончания
+
+    function ending (n, form) {
+        if (n == 1){return form[0]}
+        if (n >=2 && n <= 4){return form[1]}
+        if (n >=5){return form[2]}
+    }
+
 // Кнопка "Применить"
 
     $(".button__text").not(".button__text__inactive").click(function(){
@@ -57,24 +65,9 @@ $(document).ready(function() {
             block.children( ".dropdown__value" ).html(guests)
         }
         if (one >= 1){
-            if(one+two >= 2 && one+two <=4){
-                block.children( ".dropdown__value" ).html(one+two+" гостя")
-            }
-            else if(one+two >= 5){
-                block.children( ".dropdown__value" ).html(one+two+" гостей")
-            }
-            else if(one+two == 1){
-                block.children( ".dropdown__value" ).html(one+two+" гость")
-            } 
-
-            if ( tree == 1){
-                block.children( ".dropdown__value" ).append(", "+tree+" мледенец")
-            }
-            else if ( tree >= 2 && tree <=4){
-                block.children( ".dropdown__value" ).append(", "+tree+" мледенеца")
-            }
-            else if ( tree >= 5){
-                block.children( ".dropdown__value" ).append(", "+tree+" мледенецев")
+            block.children( ".dropdown__value" ).html(one+two+ending(one+two, [' гость', ' гостя', ' гостей']))
+            if ( tree >= 1){
+                block.children( ".dropdown__value" ).append(", "+tree+ending(tree, [' младенец', ' младенца', ' младенцев']))
             }
         }
         else {
@@ -83,7 +76,6 @@ $(document).ready(function() {
             block.find(".dropdown__list .dropdown__item-val:eq(2)" ).html(0)
             block.find(".dropdown__list .dropdown__item-val:eq(1)" ).html(0)
         }
-
 
         $(this).closest(".dropdown__list" ).slideToggle(400);
         if ($(this).closest('.dropdown').hasClass('dropdown__border')){
