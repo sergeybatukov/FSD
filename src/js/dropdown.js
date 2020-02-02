@@ -1,12 +1,18 @@
 $(document).ready(function() {
-    $(".dropdown-guests").children(".dropdown__list" ).slideToggle(0);
-    $(".dropdown-comfort").children(".dropdown__list" ).slideToggle(0);
+
+// Сворачивание всех dropdown
+    $(".dropdown").children(".dropdown__list" ).slideToggle(0);
+
+// Переменные
+
     var confort = $(".dropdown-comfort").children( ".dropdown__value" ).html()
     var guests = $( ".dropdown__value" ).html()
     var val = 0
     var one = 0
     var two = 0
     var tree = 0
+
+// "Выподание"
 
     $( ".dropdown__value" ).click(function(){
         $(this).siblings(".dropdown__list" ).slideToggle(400);
@@ -17,12 +23,16 @@ $(document).ready(function() {
             $(this).parent('.dropdown').addClass('dropdown__border');
         }
     });
+
+// Кнопка "+"
     
     $(".dropdown__plus").click(function(){
         val = +$(this).siblings(".dropdown__item-val").html()
         val += 1
         $(this).siblings(".dropdown__item-val").html(val)
     });
+
+// Кнопка "-"
 
     $(".dropdown__minus").click(function(){
         val = +$(this).siblings(".dropdown__item-val").html()
@@ -34,6 +44,8 @@ $(document).ready(function() {
         $(this).siblings(".dropdown__item-val").html(val)
         }
     });
+
+// Кнопка "Применить"
 
     $(".dropdown__list .button__text:eq(1)").click(function(){
         one = +$( ".dropdown__list .dropdown__item-val:eq(0)" ).html()
