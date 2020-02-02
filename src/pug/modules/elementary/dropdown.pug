@@ -5,13 +5,15 @@ mixin dropdown (mod, content)
         - nameOne = 'Взрослые'
         - nameTwo = 'Дети'
         - nameTree = 'Младенцы'
+        - cls = 'guests'
     else
         - val = 'Удобства номера'
         - nameOne = 'Спальни'
         - nameTwo = 'Кровати'
         - nameTree = 'Ванные комнаты'
+        - cls = 'comfort'
 
-    div(class=mod+" "+"dropdown dropdown__border")
+    div(class=mod+" "+"dropdown dropdown__border "+ "dropdown-"+cls)
         .dropdown__value=val
         .dropdown__list
             .dropdown__item
@@ -32,6 +34,7 @@ mixin dropdown (mod, content)
                     .dropdown__minus -
                     .dropdown__item-val 0
                     .dropdown__plus +
-            .dropdown__item
-                +button("очистить", "dropdown", 5)
-                +button("применить", "dropdown", 4)
+            if (content =='guests')
+                .dropdown__item
+                    +button("очистить", "dropdown", 5)
+                    +button("применить", "dropdown", 4)
