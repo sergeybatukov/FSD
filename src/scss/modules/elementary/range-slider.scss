@@ -1,0 +1,34 @@
+.range-slider{
+    position: relative;
+    &__slider{
+        background: #FFFFFF;
+        border: 1px solid rgba(31, 32, 65, 0.25);
+        border-radius: 3px;
+        height: 4px !important;
+    }
+    &__val{
+        position: absolute;
+        right: 0px;
+        font-family: $Main_font;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 12px;
+        line-height: 15px;
+        margin: 0px;
+        text-transform: uppercase;
+        color: $Dark_shade_50;
+    }
+}
+.ui-slider-handle{
+    top: -6px !important;
+    border: 2px solid #FFFFFF;
+    border-radius: 12px;
+    height: 12px !important;
+    width: 12px !important;
+    background: $SecondGrad;
+}
+.ui-slider-range{
+    top: -1px !important;
+    background: $SecondGrad;
+    height: 6px !important;
+}

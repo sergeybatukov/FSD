@@ -9,6 +9,7 @@ $Main_color                     :#BC9CFF;
 $Second_color                   :#6FCF97;
 $Second_grad_color              :#8BA4F9;
 $MainGrad                       :linear-gradient(180deg, $Main_color 0%, $Second_grad_color 100%);
+$SecondGrad                     :linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
 
 // text-settings:
 $Header_font                    :"CasperBold";
