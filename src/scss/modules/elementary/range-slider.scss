@@ -1,4 +1,8 @@
 .range-slider{
+    h3 {
+        margin-left: 0 !important;
+        margin-bottom: 23px !important;
+    }
     position: relative;
     &__slider{
         background: #FFFFFF;
@@ -8,6 +12,7 @@
     }
     &__val{
         position: absolute;
+        top: 0px;
         right: 0px;
         font-family: $Main_font;
         font-style: normal;
