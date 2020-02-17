@@ -1,0 +1,63 @@
+.datepicker{
+  display: block;
+  position: absolute;
+  left: 400px;
+  width: 320px;
+  height: 369px;
+
+  background: #FFFFFF;
+  border: 1px solid $Dark_shade_25;
+  box-sizing: border-box;
+  box-shadow: $Dark_shade_5   ;
+  border-radius: 4px;
+  &--nav {
+    display: flex;
+    padding: 20px;
+  }
+    &--nav-title{
+      width: 236px;
+      text-align: center;
+      display: inline-block;
+      @include h2;
+    }
+    &--nav-action{
+      width: 24px;
+      height: 24px;
+    }
+  &--day-name{
+    width: 40px;
+    height: 40px;
+
+    font-family: $Main_font;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 15px;
+    text-align: center;
+    color: $Main_color;
+  }
+  &--days-names{
+    display: flex;
+    padding: 20px;
+  }
+  &--cells {
+    display: flex;
+    padding: 20px;
+  }
+  &--cell-day {
+    position: relative;
+    width: 40px;
+    height: 40px;
+
+    font-family: $Main_font;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 15px;
+    text-align: center;
+    color: $Dark_shade_50;
+  }
+}
+.datepicker-range{
+
+}
