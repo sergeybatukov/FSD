@@ -4,6 +4,7 @@
   left: 400px;
   width: 320px;
   height: 369px;
+  padding: 20px;
 
   background: #FFFFFF;
   border: 1px solid $Dark_shade_25;
@@ -12,7 +13,7 @@
   border-radius: 4px;
   &--nav {
     display: flex;
-    padding: 20px;
+    padding-bottom: 30px;
   }
     &--nav-title{
       width: 236px;
@@ -26,7 +27,8 @@
     }
   &--day-name{
     width: 40px;
-    height: 40px;
+    height: 26px;
+    padding-top: 14px;
 
     font-family: $Main_font;
     font-style: normal;
@@ -38,16 +40,16 @@
   }
   &--days-names{
     display: flex;
-    padding: 20px;
   }
-  &--cells {
-    display: flex;
-    padding: 20px;
+  &--days {
+    width: 280px;
   }
   &--cell-day {
+    display: inline-block;
     position: relative;
     width: 40px;
-    height: 40px;
+    height: 26px;
+    padding-top: 14px;
 
     font-family: $Main_font;
     font-style: normal;
@@ -58,6 +60,70 @@
     color: $Dark_shade_50;
   }
 }
-.datepicker-range{
-
+.-selected-, .-focus- {
+  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+  border-radius: 22px;
+  color: white;
+  font-weight: bold;
+  border-radius: 20px;
+}
+.-in-range-{
+  &::before{
+    content: "";
+    display: block;
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(180deg, rgba(188, 156, 255, 0.25) 0%, rgba(139, 164, 249, 0.25) 100%);
+    background-position: center;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 0;
+  }
+}
+.-current-{
+  background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+  border-radius: 22px;
+  color: white;
+  font-weight: bold;
+}
+.-range-from-{
+  &::before{
+    content: "";
+    display: block;
+    width: 20px;
+    height: 40px;
+    background: linear-gradient(180deg, rgba(188, 156, 255, 0.25) 0%, rgba(139, 164, 249, 0.25) 100%);
+    background-position: center;
+    position: absolute;
+    top: 0px;
+    left: 20px;
+    z-index: 0;
+  }
+}
+.-range-to-{
+  &::before{
+    content: "";
+    display: block;
+    width: 20px;
+    height: 40px;
+    background: linear-gradient(180deg, rgba(188, 156, 255, 0.25) 0%, rgba(139, 164, 249, 0.25) 100%);
+    background-position: center;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 0;
+  }
+}
+.datepicker--content {
+  .button__text__inactive{
+    position: absolute;
+    left: 0px;
+    margin: 20px;
+  }
+  .button__text:not(.button__text__inactive){
+    position: absolute;
+    right: 0px;
+    margin: 20px;
+  }
 }
