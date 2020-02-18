@@ -21,12 +21,10 @@ $(document).ready(function() {
 
     $(".date-range__start").click(function(){
         var position = $(".date-range__start").offset()
-        $('.datepicker').css('top', position.top+40)
         $(".datepicker" ).slideDown(400);
     })
     $(".date-range__end").click(function(){
         var position = $(".date-range__start").offset()
-        $('.datepicker').css('top', position.top+40)
         $(".datepicker" ).slideDown(400);
     })
 

@@ -1,7 +1,8 @@
 .datepicker{
-  position: absolute;
-  top: -400px;
+  position: relative;
+  top: 5px;
   padding: 20px;
+  width: 320px;
 
   background: #FFFFFF;
   border: 1px solid $Dark_shade_25;
@@ -126,4 +127,14 @@
 .datepicker--button{
   display: block;
   margin-top: 20px;
+}
+.date-range{
+  width: 320px;
+  h3, .start, .end, input{
+    width: 150px;
+    display: inline-block;
+  }
+  .end {
+    margin-left: 20px;
+  }
 }
