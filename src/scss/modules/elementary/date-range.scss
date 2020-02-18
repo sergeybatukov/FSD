@@ -1,8 +1,6 @@
 .datepicker{
-  display: block;
   position: absolute;
   top: -400px;
-  height: 369px;
   padding: 20px;
 
   background: #FFFFFF;
@@ -124,7 +122,6 @@
 }
 
 .datepicker--button{
-  position: absolute;
-  left: 0px;
-  margin: 20px ;
+  display: block;
+  margin-top: 20px;
 }
