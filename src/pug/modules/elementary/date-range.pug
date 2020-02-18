@@ -1,4 +1,6 @@
 mixin date-range(mod)
     - mod = mod+"__date-range"
     div(class=mod+" "+"date-range" readonly)
-        input.datepicker-range.text-field__input
+        input.date-range__start.text-field__input(placeholder = 'ДД.ММ.ГГГГ', readonly)
+        input.date-range__end.text-field__input(placeholder = 'ДД.ММ.ГГГГ', readonly)
+        .datepicker-here
