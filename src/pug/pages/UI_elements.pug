@@ -1,0 +1,33 @@
+extends ../layout/main
+block content
+    .UI__form.form
+        +text-field('text field', 'UI', 'Email', 1)
+        +button('click me','UI', 0)
+        +button('click me','UI', 1)
+        +button('click me','UI', 2)
+        +button('click me','UI', 3)
+        +button('click me','UI', 4)
+        +button('click me','UI', 5)
+        
+        .UI__checkbox-list.checkbox-list
+            h3(class="checkbox-list checkbox-list__header") expandable checkbox list
+            .checkbox-list__container
+                +checkbox('1', 'checkbox-list', 'Завтрак')
+                +checkbox('2', 'checkbox-list', 'Письменный стол')
+                +checkbox('3', 'checkbox-list', 'Стул для кормления')
+                +checkbox('4', 'checkbox-list', 'Кроватка')
+                +checkbox('5', 'checkbox-list', 'Телевизор')
+                +checkbox('6', 'checkbox-list', 'Шампунь')
+        h3 Radio Buttons        
+        +radio-buttons("Мужчина", "m", "Женщина", "w", "male", "UI")
+        h3 Toggle
+        +toggle("Получать спецпредложения", "spec", "special", "UI")
+        h3 like button
+        +like-button("like", 3, "UI")
+        h3 rate button
+        +rating(50, "UI")
+        h3 Dropdown
+        +dropdown('UI', 'guests')
+        +dropdown('UI', ' ')
+        +range-slider('Диапазон цен', 'UI')
+        +date-range('UI')
