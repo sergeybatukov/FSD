@@ -61,6 +61,22 @@
     text-align: center;
     color: $Dark_shade_50;
   }
+  &--cell-month, &--cell-year{
+    margin: 0 3px;
+    display: inline-block;
+    position: relative;
+    width: 40px;
+    height: 26px;
+    padding-top: 14px;
+
+    font-family: $Main_font;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 15px;
+    text-align: center;
+    color: $Dark_shade_50;
+  }
 }
 .-selected-, .-focus- {
   background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
@@ -122,6 +138,7 @@
   .button__text:not(.button__text__inactive){
     position: absolute;
     right: 0px;
+    bottom: 0px;
     margin: 20px;
     z-index: 2;
   }
