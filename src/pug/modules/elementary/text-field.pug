@@ -3,14 +3,14 @@ mixin text-field (text, mod, placeHolder, switch_label)
     case switch_label
         when 0
             div(class=mod+' '+'text-field')
-                input(class='text-field', placeholder=placeHolder)
+                input(class='text-field__input', placeholder=placeHolder)
         when 1
             div(class=mod+' '+'text-field')
                 h3(class='text-field__label')=text
                 input(class='text-field__input', placeholder=placeHolder)
         default
             div(class=mod+' '+'text-field')
-                input(class='text-field', placeholder=placeHolder)
+                input(class='text-field__input', placeholder=placeHolder)
 
 
 //- text - заголовок
