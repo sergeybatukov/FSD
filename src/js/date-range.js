@@ -16,17 +16,12 @@ $(document).ready(function() {
     }) 
     $('.datepicker--button').addClass('button__text button__text__inactive')
     $('.datepicker--content').append('<button class="button__text" type="button">применить</button>');
-
+    
     $(".datepicker" ).slideToggle(0);
 
-    $(".date-range__start, .date-range__end, .start").click(function(){
-        var position = $(".date-range__start").offset()
-        $(".datepicker" ).slideDown(400);
+    $(".end, .start").click(function(){
+        $(".datepicker" ).slideToggle(400);
     })
-    // $(".date-range__end").click(function(){
-    //     var position = $(".date-range__start").offset()
-    //     $(".datepicker" ).slideDown(400);
-    // })
 
     $('.button__text').not('.button__text__inactive').click(function(){
         $(this).closest('.datepicker').slideToggle(400);
