@@ -12,13 +12,11 @@ $MainGrad                       :linear-gradient(180deg, $Main_color 0%, $Second
 $SecondGrad                     :linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
 
 // text-settings:
-$Header_font                    :"CasperBold";
+$Header_font                    :"Montserrat";
 $Main_font                      :"Montserrat";
 
 @mixin h1{
     font-family: $Header_font;
-    font-style: normal;
-    font-weight: bold;
     font-size: 24px;
     line-height: 30px;
     color: $Dark_shade_100;

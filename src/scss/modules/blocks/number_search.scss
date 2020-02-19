@@ -1,7 +1,6 @@
 .number_search {
     position: relative;
     width: 380px;
-    height: 380px;
     left: 50px;
     top: 50px;
     padding: 40px 30px 30px 30px;
@@ -21,7 +20,20 @@
         margin-bottom: 5px;
     }
     &__button {
+        margin-top: 74px;
         width: 100%;
+        &::before{
+            content: "";
+            display: block;
+            width: 44px;
+            height: 44px;
+            background: url('/assets/img/arrow_forward_white.svg') no-repeat;
+            background-position: center;
+            position: absolute;
+            top: 0px;
+            right: 0px;
+            z-index: 2;
+        }
     }
     &__dropdown {
         margin-bottom: 30px;
