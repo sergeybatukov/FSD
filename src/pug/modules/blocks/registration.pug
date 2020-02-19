@@ -1,3 +1,13 @@
 mixin registration(mod)
     - mod=mod+"__registration"
     div(class=mod+' '+'registration')
+        h1 Регистрация аккаунта
+        +text-field(' ', 'registration', 'Имя', 0)
+        +text-field(' ', 'registration', 'Фамилия', 0)
+        +radio-buttons("Мужчина", "m", "Женщина", "w", "male", "registration")
+        +date-range('registration', 1)
+        +text-field('данные для входа в сервис', 'registration', 'Email', 1)
+        +text-field(' ', 'registration', 'Пароль', 0)
+        +toggle("Получать спецпредложения", "spec", "special", "registration")
+        +button('перейти к оплате','registration', 0)
+        +button('войти','registration', 1)
