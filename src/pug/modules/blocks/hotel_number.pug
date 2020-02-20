@@ -1,3 +1,26 @@
 mixin hotel_number(mod)
     - mod=mod+"__hotel_number"
     div(class=mod+' '+'hotel_number')
+        table.hotel_number__header
+            tr
+                td.hotel_number__title
+                    h3 №
+                    h1 888
+                    span.luxury люкс
+                td.hotel_number__price
+                    h2 9 990₽
+                    span в сутки
+        +date-range('hotel_number')
+        h3 гости
+        +dropdown('hotel_number', 'guests')
+        table.hotel_number__options
+            tr
+                td.hotel_number__option 9 990₽ х 4 суток 
+                td 39 960₽
+            tr
+                td.hotel_number__option Сбор за услуги: скидка 2 179₽
+                td 0₽
+            tr
+                td.hotel_number__option Сбор за дополнительные услуги
+                td 300₽
+        +button('забронировать','number_search', 0)
