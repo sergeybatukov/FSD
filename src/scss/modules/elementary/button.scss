@@ -1,7 +1,7 @@
 .button{
     position: relative;
     height: 44px;
-    padding: 10px 20px;
+    padding: 10px 0px;
     @include h3;
     color: #FFFFFF;
     background: $MainGrad;
@@ -17,7 +17,7 @@
         background: linear-gradient(hsla(0,0%,100%,0),hsla(0,0%,100%,0)),$MainGrad;
         background-clip: content-box,border-box;
         background-origin: border-box;
-        padding: 10px 20px;
+        padding: 10px 0px;
         height: 44px;
         color: $Main_color;
         &__inactive{

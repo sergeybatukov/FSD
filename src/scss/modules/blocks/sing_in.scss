@@ -1,0 +1,59 @@
+.sing_in {
+    display: inline-block;
+    width: 100%;
+    box-sizing: border-box;
+    position: absolute;
+    width: 380px;
+    height: 358px;
+    left: 560px;
+    top: 701px;
+
+
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    box-sizing: border-box;
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    padding: 40px 30px 30px 30px;
+
+    &__header{
+        margin-bottom: 20px;
+    }
+
+    &__data{
+        position: relative;
+        margin-bottom: 20px;
+        .text-field {
+            margin: 10px 0px;
+        }
+    }
+
+    &__button.button {
+        width: 100%;
+        margin-bottom: 30px;
+        &::before{
+            content: "";
+            display: block;
+            width: 44px;
+            height: 44px;
+            background: url('/assets/img/arrow_forward_white.svg') no-repeat;
+            background-position: center;
+            position: absolute;
+            top: 0px;
+            right: 0px;
+            z-index: 2;
+        }
+    }
+    a {
+        display: inline-block;
+        padding: 15px 0;
+        @include body_text;
+        text-decoration: none;
+        color: #000;
+        margin-right: auto;
+    }
+    &__button.button__hollow {
+        float: right;
+        width: 99px;
+    }
+}

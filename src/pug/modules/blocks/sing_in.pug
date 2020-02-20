@@ -1,3 +1,10 @@
 mixin sing_in(mod)
     - mod=mod+"__sing_in"
     div(class=mod+' '+'sing_in')
+        h1.sing_in__header Войти
+        .sing_in__data
+            +text-field('Email', 'sing_in', 'Email', 0)
+            +text-field('Password', 'sing_in', 'Пароль', 0)
+        +button('войти','sing_in', 0)
+        a(href="#") Нет аккаунта на Toxin?
+        +button('создать','sing_in', 1) 
