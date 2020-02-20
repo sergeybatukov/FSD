@@ -2,7 +2,7 @@ mixin number_search(mod)
     - mod=mod+"__number_search"
     div(class=mod+' '+'number_search')
         h1.number_search__header Найдём номера под ваши пожелания
-        +date-range('number_search', 2)
+        +date-range('number_search')
         h3 гости
         +dropdown('number_search', 'guests')
         +button('подобрать номер','number_search', 0)
