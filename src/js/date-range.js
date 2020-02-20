@@ -10,6 +10,7 @@ $(document).ready(function() {
         nextHtml: '<svg width="17" height="18" viewBox="0 0 17 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.36301 0.984375L16.3786 9L8.36301 17.0156L6.95676 15.6094L12.5349 9.98438H0.347383V8.01562H12.5349L6.95676 2.39062L8.36301 0.984375Z" fill="#BC9CFF"/></svg>',
         keyboardNav: true,
         clearButton: true,
+        minDate: new Date(),
         navTitles: {
             days: 'MM yyyy'
         },
@@ -51,7 +52,4 @@ $(document).ready(function() {
 
     $('.date-range__start').html('ДД.ММ.ГГГГ')
     $('.date-range__end').html('ДД.ММ.ГГГГ')
-    
-    // доделать ограничения: -для выбора периода(начальная дата не меньше сегодня); 
-    //                       -для дня рождения(не больше сегодня, так как ограничения по возросту не известны) 
 });
