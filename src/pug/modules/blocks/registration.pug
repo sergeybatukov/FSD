@@ -1,13 +1,17 @@
 mixin registration(mod)
     - mod=mod+"__registration"
     div(class=mod+' '+'registration')
-        h1 Регистрация аккаунта
-        +text-field(' ', 'registration', 'Имя', 0)
-        +text-field(' ', 'registration', 'Фамилия', 0)
-        +radio-buttons("Мужчина", "m", "Женщина", "w", "male", "registration")
-        +date-range('registration', 1)
-        +text-field('данные для входа в сервис', 'registration', 'Email', 1)
-        +text-field(' ', 'registration', 'Пароль', 0)
-        +toggle("Получать спецпредложения", "spec", "special", "registration")
+        h1.registration__header Регистрация аккаунта
+        .registration__data
+            +text-field(' ', 'registration__data', 'Имя', 0)
+            +text-field(' ', 'registration__data', 'Фамилия', 0)
+            +radio-buttons("Мужчина", "m", "Женщина", "w", "male", "registration__data")
+        +text-field('Дата рождения', 'date_text registration', 'ДД.ММ.ГГ', 1)
+        .registration__data
+            +text-field('данные для входа в сервис', 'registration', 'Email', 1)
+            +text-field(' ', 'registration', 'Пароль', 0)
+            +toggle("Получать спецпредложения", "spec", "special", "registration")
         +button('перейти к оплате','registration', 0)
-        +button('войти','registration', 1)
+        a(href="#") Уже есть аккаунт на Toxin
+        +button('войти','registration', 1) 
+        
