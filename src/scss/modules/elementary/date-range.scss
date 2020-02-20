@@ -1,6 +1,5 @@
 .datepicker{
   position: absolute;
-  top: 190px;
   padding: 20px;
   width: 320px;
   margin-bottom: 20px;
@@ -149,8 +148,10 @@
   margin-top: 20px;
 }
 .date-range{
+  position: relative;
   width: 320px;
   input {
+    margin-bottom: 5px;
     cursor: pointer;
   }
   h3, .start, .end, input{

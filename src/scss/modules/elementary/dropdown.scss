@@ -1,5 +1,5 @@
 .dropdown{
-    position: absolute;
+    position: relative;
     border-radius: 4px;
     @include input_text;
     background: #FFFFFF;
@@ -8,9 +8,9 @@
     box-sizing: border-box;
     z-index: 5;
     &__border{
-        border-radius: 4px;
+        border-radius: 4px 4px 0px 0px;
         box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
-        border: 1px solid $Dark_shade_50;
+        border: 1px solid $Dark_shade_50 !important;
     }
     &__value{
         padding: 13px 15px;
@@ -31,8 +31,16 @@
         }
         
     &__list{
-        border-top: 1px solid $Dark_shade_50;
+        box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
+        border: 1px solid $Dark_shade_50 !important;
+        border-radius: 0px 0px 4px 4px;
+        position: absolute;
+        top: 44px;
+        left: -1px;
         padding-bottom: 7px;
+        background: #FFFFFF;
+        width: 320px;
+        box-sizing: border-box;
     }
     &__item{
         position: relative;
