@@ -1,0 +1,89 @@
+.hotel_number {
+    position: absolute;
+    width: 380px;
+    height: 511px;
+    left: 560px;
+    top: 150px;
+
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    box-sizing: border-box;
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+
+    padding: 40px 30px 30px 30px;
+    &__title {
+        display: inline-block;
+        * {
+            display: inline;
+        }
+        h1 {
+            margin: 0 5px;
+        }
+        span {
+            @include h3;
+            color: $Main_color;
+        }
+    }
+    &__price {
+        display: inline-block;
+        * {
+            display: inline;
+        }
+        h2 {
+            color: $Dark_shade_50 ;
+            margin: 0 5px;
+        }
+        span {
+            @include body_text;
+            color: $Dark_shade_50 ;
+        }
+        
+    }
+    &__header, &__dropdown {
+        margin-bottom: 20px;
+    }
+    &__date-range {
+        margin-bottom: 15px;
+    }
+    h3 {
+        margin-bottom: 5px;
+    }
+    &__button {
+        margin-top: 10px;
+        width: 100%;
+        &::before{
+            content: "";
+            display: block;
+            width: 44px;
+            height: 44px;
+            background: url('/assets/img/arrow_forward_white.svg') no-repeat;
+            background-position: center;
+            position: absolute;
+            top: 0px;
+            right: 0px;
+            z-index: 2;
+        }
+    }
+    &__options{
+        width: 100%;
+        @include body_text; 
+        td {
+            padding-bottom: 20px;
+        }
+        td:not(.hotel_number__option){
+            text-align: right;
+        }
+    }
+    .hotel_number__option{
+        width: 214px;
+    }
+    &__header{
+        width: 100%;
+        tbody {width: 100%;}
+    }
+    &__price{
+        padding-top: 6px;
+        float: right;
+    }
+}
