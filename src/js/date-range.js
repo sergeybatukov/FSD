@@ -34,9 +34,23 @@ $(document).ready(function() {
     // кнопка "применить", запись в инпуты
     $('.button__text').not('.button__text__inactive').click(function(){
         $(this).closest('.datepicker').slideToggle(400);
-        $(this).parents('.date-range').children('.start').children('.date-range__start').val(startDay)
-        $(this).parents('.date-range').children('.end').children('.date-range__end').val(endDay)
+        if (startDay == 0){
+            $(this).parents('.date-range').children('.start').children('.date-range__start').html('ДД.ММ.ГГГГ')
+        }
+        else {
+            $(this).parents('.date-range').children('.start').children('.date-range__start').html(startDay)
+        }
+        $(this).parents('.date-range').children('.end').children('.date-range__end').html(endDay)
     })
+
+    // кнопка "очистить"
+    $('.button__text__inactive').click(function(){
+        $(this).parents('.date-range').children('.start').children('.date-range__start').html('ДД.ММ.ГГГГ')
+        $(this).parents('.date-range').children('.end').children('.date-range__end').html('ДД.ММ.ГГГГ')
+    })
+
+    $('.date-range__start').html('ДД.ММ.ГГГГ')
+    $('.date-range__end').html('ДД.ММ.ГГГГ')
     
     // доделать ограничения: -для выбора периода(начальная дата не меньше сегодня); 
     //                       -для дня рождения(не больше сегодня, так как ограничения по возросту не известны) 

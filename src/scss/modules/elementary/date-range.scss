@@ -2,6 +2,7 @@
   position: absolute;
   padding: 20px;
   width: 320px;
+  margin-top: 5px;
   margin-bottom: 20px;
 
   background: #FFFFFF;
@@ -150,10 +151,6 @@
 .date-range{
   position: relative;
   width: 320px;
-  input {
-    margin-bottom: 5px;
-    cursor: pointer;
-  }
   h3, .start, .end, input{
     width: 150px;
     display: inline-block;
@@ -162,19 +159,19 @@
     margin-left: 20px;
   }
 }
-.start, .end {
+.text-field__input {
   position: relative;
+
   &::after{
     cursor: pointer;
     content: " ";
     display: block;
     width: 44px;
     height: 44px;
-    background-color: red;
     background: url('/assets/img/expand_more.svg') no-repeat;
     background-position: center;
     position: absolute;
-    top: 24px;
+    top: 0px;
     right: 0px;
     transform: rotate(180deg);
     }
