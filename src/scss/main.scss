@@ -18,3 +18,14 @@
 @import "modules/blocks/registration.scss";
 
 @import "layout/index.scss";
+body {
+    background-color: #F4F4F6;
+}
+.body-logo{
+    position: relative;
+    left: 30px;
+    top: 30px;
+    width: 48x;
+    height: 48px;
+    background: url('/assets/img/logo-grey.svg') no-repeat;
+}
