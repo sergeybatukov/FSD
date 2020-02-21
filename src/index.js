@@ -11,3 +11,4 @@ require('./js/plagins/datepicker');
 
 import './js/range-slider'
 import './js/date-range'
+import './js/galery'

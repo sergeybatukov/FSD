@@ -1,0 +1,45 @@
+.galery{
+    position: relative;
+    display: block;
+    height: 150px;
+    width: 270px;
+    &__botton {
+        position: absolute;
+    }
+    &__button-left{
+        display: inline-block;
+        width: 42px;
+        height: 150px;
+        background: linear-gradient(90deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 99.99%, rgba(255, 255, 255, 0) 100%);
+        &::after{
+            content: "";
+            display: block;
+            width: 44px;
+            height: 44px;
+            background: url('/assets/img/expand_more_white.svg') no-repeat;
+            background-position: center;
+            position: absolute;
+            top: 53px;
+            z-index: 2;
+        }
+    }
+    &__button-right{
+        float: right;
+        display: block;
+        width: 42px;
+        height: 150px;
+        background: linear-gradient(270deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 99.99%, rgba(255, 255, 255, 0) 100%);
+        &::after{
+            content: "";
+            display: block;
+            width: 44px;
+            height: 44px;
+            background: url('/assets/img/expand_more_white.svg') no-repeat;
+            background-position: center;
+            position: absolute;
+            top: 53px;
+            z-index: 2;
+            transform: rotate(180deg);
+        }
+    }
+}
