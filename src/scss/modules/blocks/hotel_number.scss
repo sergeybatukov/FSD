@@ -13,6 +13,7 @@
 
     padding: 40px 30px 30px 30px;
     &__title {
+        padding: 0px;
         display: inline-block;
         * {
             display: inline;
@@ -27,6 +28,7 @@
     }
     &__price {
         display: inline-block;
+        padding: 0;
         * {
             display: inline;
         }
@@ -44,13 +46,13 @@
         margin-bottom: 20px;
     }
     &__date-range {
-        margin-bottom: 15px;
+        margin-bottom: 20px;
     }
     h3 {
         margin-bottom: 5px;
     }
     &__button {
-        margin-top: 10px;
+        margin-top: 20px;
         width: 100%;
         &::before{
             content: "";
@@ -67,16 +69,39 @@
     }
     &__options{
         width: 100%;
-        @include body_text; 
-        td {
-            padding-bottom: 20px;
-        }
-        td:not(.hotel_number__option){
-            text-align: right;
+        @include body_text;
+        span {float: right;}
+
+    }
+    &__option{
+        display: flex;
+        width: 234px;
+        height: 20px;
+        padding-bottom: 14px;
+        div:not(.info) { 
+            display: inline-block;
+            width: 214px;
         }
     }
-    .hotel_number__option{
-        width: 214px;
+    &__sum {
+        display: flex;
+        position: relative;
+        flex-wrap: nowrap;
+        align-items: baseline;
+        width: 100%;
+        margin-top: 30px;
+        @include h2;
+        .dots{
+            flex-grow: 1;
+            border-bottom: 1px dotted rgba(31,32,65,.25);
+        }
+        h2 {
+            margin: 0;
+            padding-right: 5px;
+        }
+        &-price{
+            padding-left: 5px;
+        }
     }
     &__header{
         width: 100%;
@@ -86,4 +111,11 @@
         padding-top: 6px;
         float: right;
     }
+    
+}
+.info {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: url('/assets/img/i.svg') no-repeat;
 }
