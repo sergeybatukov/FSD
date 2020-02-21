@@ -133,11 +133,12 @@
   margin-top: 20px;
 }
 .date-range{
+  display: flex;
   position: relative;
   width: 320px;
   h3, .start, .end, input{
     width: 150px;
-    display: inline-block;
+    display: block;
   }
   .end {
     margin-left: 20px;
