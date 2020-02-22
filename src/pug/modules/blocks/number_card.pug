@@ -1,6 +1,32 @@
-mixin number_card(mod)
+mixin number_card(mod, luxury)
     - mod=mod+"__number_card"
     div(class=mod+' '+'number_card')
-        +galery('number_card', 0)
-        .number_card__info
-        +rating(50, "number_card")
+        if luxury == 1
+            +galery('number_card', 0)
+            .number_card__info
+                .number_card__title
+                    .number_card__num № 
+                    .number_card__number 888
+                    .number_card__luxury люкс
+                .number_card__rate
+                    .number_card__price 9 990₽
+                    .number_card__period в сутки
+                hr
+                +rating(50, "number_card")
+                .number_card__reviews
+                    .number_card__amount 145
+                    .number_card__label Отзывов
+        else 
+            +galery('number_card', 1)
+            .number_card__info
+                .number_card__title
+                    .number_card__num № 
+                    .number_card__number 888
+                .number_card__rate
+                    .number_card__price 9 990₽
+                    .number_card__period в сутки
+                hr
+                +rating(50, "number_card")
+                .number_card__reviews
+                    .number_card__amount 145
+                    .number_card__label Отзывов
