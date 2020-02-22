@@ -3,14 +3,34 @@
     display: block;
     height: 150px;
     width: 270px;
-    &__botton {
+    &__button {
         position: absolute;
+        width: 100%;
+        top: 0px;
+    }
+    &__button-dots{
+        position: absolute;
+        bottom: 0px;
+        right: 0px;
+        margin: 15px;
+    }
+    &__button-dot{
+        display: inline-block;
+        margin-left: 3px;
+        height: 5.5px;
+        width: 5.5px;
+        border-radius: 5px;
+        border: 1px solid #FFFFFF;
+        &_fill{
+            background: white;
+        }
     }
     &__button-left{
         display: inline-block;
         width: 42px;
         height: 150px;
         background: linear-gradient(90deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 99.99%, rgba(255, 255, 255, 0) 100%);
+        border-radius: 4px 0px 0px 0px;
         &::after{
             content: "";
             display: block;
@@ -24,6 +44,7 @@
         }
     }
     &__button-right{
+        border-radius: 0px 4px 0px 0px;
         float: right;
         display: block;
         width: 42px;
@@ -41,5 +62,10 @@
             z-index: 2;
             transform: rotate(180deg);
         }
+    }
+    &__img{
+        height: 150px;
+        background-size: cover;
+        border-radius: 4px 4px 0px 0px;
     }
 }
