@@ -1,8 +1,14 @@
-mixin galery(mod)
+mixin galery(mod, switch_button)
     - mod=mod+"__galery"
     div(class=mod+' '+'galery')
-        .galery__img
-        .galery__button
-            .galery__button-left
-            .galery__button-right
-            .galery__button-dots
+        case switch_button
+            when 0
+                .galery__img
+                .galery__button
+                    .galery__button-left
+                    .galery__button-right
+                    .galery__button-dots
+            default 
+                .galery__img
+                .galery__button
+                    .galery__button-dots
