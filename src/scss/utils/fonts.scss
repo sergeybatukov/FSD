@@ -17,3 +17,52 @@
     font-weight: normal;
     font-style: normal;
 }
+
+@font-face {
+    font-family: 'Quicksand';
+    src: url('/assets/fonts/quicksand/Quicksand-Medium.eot');
+    src: local('Quicksand Medium'), local('Quicksand-Medium'),
+        url('/assets/fonts/quicksand/Quicksand-Medium.eot?#iefix') format('embedded-opentype'),
+        url('/assets/fonts/quicksand/Quicksand-Medium.woff2') format('woff2'),
+        url('/assets/fonts/quicksand/Quicksand-Medium.woff') format('woff'),
+        url('/assets/fonts/quicksand/Quicksand-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Quicksand';
+    src: url('/assets/fonts/quicksand/Quicksand-Light.eot');
+    src: local('Quicksand Light'), local('Quicksand-Light'),
+        url('/assets/fonts/quicksand/Quicksand-Light.eot?#iefix') format('embedded-opentype'),
+        url('/assets/fonts/quicksand/Quicksand-Light.woff2') format('woff2'),
+        url('/assets/fonts/quicksand/Quicksand-Light.woff') format('woff'),
+        url('/assets/fonts/quicksand/Quicksand-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Quicksand';
+    src: url('/assets/fonts/quicksand/Quicksand-Regular.eot');
+    src: local('Quicksand Regular'), local('Quicksand-Regular'),
+        url('/assets/fonts/quicksand/Quicksand-Regular.eot?#iefix') format('embedded-opentype'),
+        url('/assets/fonts/quicksand/Quicksand-Regular.woff2') format('woff2'),
+        url('/assets/fonts/quicksand/Quicksand-Regular.woff') format('woff'),
+        url('/assets/fonts/quicksand/Quicksand-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Quicksand';
+    src: url('/assets/fonts/quicksand/Quicksand-Bold.eot');
+    src: local('Quicksand Bold'), local('Quicksand-Bold'),
+        url('/assets/fonts/quicksand/Quicksand-Bold.eot?#iefix') format('embedded-opentype'),
+        url('/assets/fonts/quicksand/Quicksand-Bold.woff2') format('woff2'),
+        url('/assets/fonts/quicksand/Quicksand-Bold.woff') format('woff'),
+        url('/assets/fonts/quicksand/Quicksand-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
