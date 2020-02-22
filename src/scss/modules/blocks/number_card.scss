@@ -3,9 +3,89 @@
     width: 270px;
     height: 257px;
     left: 980px;
-    top: 559.5px;
+    top: 150px;
 
     background: #FFFFFF;
     box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
     border-radius: 4px;
+    &__info{
+        padding: 20px;
+        hr {
+            border: none;
+            border-top: 1px solid rgba(31, 32, 65, 0.1);
+        }
+    }
+    &__title {
+        padding: 0px;
+        display: inline-block;
+        * {
+            display: inline-block;
+        }
+        .number_card__num {
+            font-family: Quicksand;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 14px;
+            line-height: 17px;
+            color: $Dark_shade_100;
+        }
+        .number_card__number {
+            font-family: Quicksand;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 18px;
+            line-height: 24px;
+            color: $Dark_shade_100;
+            margin: 0px 5px;
+        }
+        .number_card__luxury {
+            @include h3;
+            color: $Main_color;
+        }
+    }
+    &__rate {
+        display: block;
+        float: right;
+        padding: 0;
+        * {
+            display: inline-block;
+        }
+        .number_card__price {
+            color: $Dark_shade_50 ;
+            font-family: Montserrat;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 14px;
+            padding-top: 5px;
+            margin: 0 5px;
+        }
+        .number_card__period {
+            @include body_text;
+            color: $Dark_shade_50 ;
+        }
+    }
+    &__rating {
+        display: inline-block;
+    }
+    &__reviews{
+        display: block;
+        float: right;
+        padding: 0;
+        * {
+            display: inline-block;
+        }
+        .number_card__amount{
+            color: $Dark_shade_50 ;
+            font-family: Montserrat;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 14px;
+            padding-top: 2px;
+            margin: 0 5px;
+        }
+        .number_card__label{
+            @include body_text;
+            color: $Dark_shade_50 ;
+        }
+    }
 }
