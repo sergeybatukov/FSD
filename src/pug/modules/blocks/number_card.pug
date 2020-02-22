@@ -1,7 +1,7 @@
 mixin number_card(mod, luxury)
     - mod=mod+"__number_card"
-    div(class=mod+' '+'number_card')
-        if luxury == 1
+    if luxury == 1
+        div(class=mod+' '+'number_card luxury')
             +galery('number_card', 0)
             .number_card__info
                 .number_card__title
@@ -16,7 +16,8 @@ mixin number_card(mod, luxury)
                 .number_card__reviews
                     .number_card__amount 145
                     .number_card__label Отзывов
-        else 
+    else 
+        div(class=mod+' '+'number_card')
             +galery('number_card', 1)
             .number_card__info
                 .number_card__title
