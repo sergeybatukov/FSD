@@ -3,4 +3,4 @@ mixin number_card(mod)
     div(class=mod+' '+'number_card')
         +galery('number_card', 0)
         .number_card__info
-        .number_card__rating
+        +rating(50, "number_card")
