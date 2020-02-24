@@ -11,15 +11,13 @@
     }
     &__content{
         position: absolute;
-        padding: 15px 0px;
+        margin-top: 18px;
         right: 0px;
+        height: 34px;
         display: inline-block;
-
     }
     &__nav{
         display: inline-block;
-        padding: 11px 0px;
-        margin-right: 5px;
     }
     &__link{
         display: inline-block;
@@ -29,9 +27,11 @@
         font-style: normal;
         font-weight: normal;
         font-size: 14px;
-        line-height: 17px;
+        height: 18px;
         color: $Dark_shade_50;
         text-decoration: none;
+        padding: 8px 0px;
+        
 
         &_active{
             font-weight: bold;
@@ -49,7 +49,7 @@
                 background: url('/assets/img/expand_more.svg') no-repeat;
                 background-position: center;
                 position: absolute;
-                top: 0px;
+                top: 8px;
                 right: -24px;
                 transform: rotate(180deg);
             }
@@ -58,21 +58,21 @@
 
     &__button {
         margin-left: 20px !important;
+        height: 34px !important;
     }
 
     &__vertical-line{
+        position: absolute;
         display: inline-block;
         background: rgba(31, 32, 65, 0.1);;
         width: 1px;
         height: 30px;
-        position: relative;
-        top:9px;
-        margin-left: 10px;
+        margin-left: 20px;
     }
     &__login{
         display: inline-block;
         a {
-            margin-left: 30px;
+            margin-left: 50px;
             margin-right: 0px;
         }
     }
