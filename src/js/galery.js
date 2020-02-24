@@ -1,7 +1,7 @@
 $(document).ready(function() {
 
     //массив с путями к изображениям 
-    var imgs = ['/assets/img/1.png', '/assets/img/2.png', '/assets/img/3.png', '/assets/img/4.png']
+    var imgs = ['assets/img/1.png', 'assets/img/2.png', 'assets/img/3.png', 'assets/img/4.png']
 
     //текущий индекс 
     var i = 0
