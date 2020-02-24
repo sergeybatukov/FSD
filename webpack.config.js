@@ -21,9 +21,9 @@ module.exports = {
     output: {
         filename: 'assets/[name].js',
         path: path.resolve(__dirname, './dist'),
-        publicPath: '/'
+        publicPath: ''
     },
-
+    
     module: {
         rules: [
         {
