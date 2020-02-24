@@ -68,3 +68,19 @@ h3{
     line-height: 18px;
     color: $Dark_shade_100;
 }
+
+.wrapper{
+    position: relative;
+    display: block;
+    height: 100%;
+    width: 1160px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.logo{
+    position: relative;
+    display: inline-block;
+    width: 105.69px;
+    height: 40px;
+    background: url(/assets/img/logo.svg) no-repeat;
+}
