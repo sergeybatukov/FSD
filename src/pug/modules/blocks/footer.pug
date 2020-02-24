@@ -1,0 +1,7 @@
+mixin footer(mod, login)
+    - mod=mod+"__footer"
+    header(class=mod+' '+'footer')
+        .wrapper
+            .logo
+            if (login == 0)
+                .footer__content
