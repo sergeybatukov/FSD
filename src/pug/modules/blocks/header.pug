@@ -1,0 +1,28 @@
+mixin header(mod, login)
+    - mod=mod+"__header"
+    header(class=mod+' '+'header')
+        .wrapper
+            .logo
+            if (login == 0)
+                .header__content
+                    nav.header__nav
+                        a.header__link.header__link_active(href="#") Home
+                        a.header__link(href="#") About Us
+                        a.header__link.header__link_dropdown(href="#") Sercices
+                        a.header__link(href="#") Careers
+                        a.header__link(href="#") News
+                        a.header__link(href="#") Documentation
+                    +button('войти','header', 1)
+                    +button('зарегистрироваться','header', 0)
+            else
+                .header__content
+                    nav.header__nav
+                        a.header__link.header__link_active(href="#") Home
+                        a.header__link(href="#") About Us
+                        a.header__link.header__link_dropdown(href="#") Sercices
+                        a.header__link(href="#") Careers
+                        a.header__link(href="#") News
+                        a.header__link(href="#") Documentation
+                    .header__vertical-line
+                    .header__login
+                        a.header__link(href="#") Sergey Batukov
