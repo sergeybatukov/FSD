@@ -6,23 +6,21 @@ mixin header(mod, login)
             if (login == 0)
                 .header__content
                     nav.header__nav
-                        a.header__link.header__link_active(href="#") Home
-                        a.header__link(href="#") About Us
-                        a.header__link.header__link_dropdown(href="#") Sercices
-                        a.header__link(href="#") Careers
-                        a.header__link(href="#") News
-                        a.header__link(href="#") Documentation
+                        a.header__link(href="#") О нас
+                        a.header__link.header__link_dropdown(href="#") Услуги
+                        a.header__link(href="#") Вакансии
+                        a.header__link(href="#") Новости
+                        a.header__link.header__link_dropdown(href="#") Соглашения
                     +button('войти','header', 1)
                     +button('зарегистрироваться','header', 0)
             else
                 .header__content
                     nav.header__nav
-                        a.header__link.header__link_active(href="#") Home
-                        a.header__link(href="#") About Us
-                        a.header__link.header__link_dropdown(href="#") Sercices
-                        a.header__link(href="#") Careers
-                        a.header__link(href="#") News
-                        a.header__link(href="#") Documentation
+                        a.header__link(href="#") О нас
+                        a.header__link.header__link_dropdown(href="#") Услуги
+                        a.header__link(href="#") Вакансии
+                        a.header__link(href="#") Новости
+                        a.header__link.header__link_dropdown(href="#") Соглашения
                     .header__vertical-line
                     .header__login
                         a.header__link(href="#") Sergey Batukov
