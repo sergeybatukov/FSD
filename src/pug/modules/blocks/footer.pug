@@ -1,7 +1,47 @@
 mixin footer(mod, login)
     - mod=mod+"__footer"
-    header(class=mod+' '+'footer')
-        .wrapper
-            .logo
-            if (login == 0)
+    if (login == 0)
+        div(class=mod+' '+'footer')
+            .wrapper
                 .footer__content
+                    .footer__item_big
+                        .logo
+                        p Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды
+                    .footer__item
+                        h3 навигация
+                        a(href="#") О нас
+                        a(href="#") Новости
+                        a(href="#") Служба поддержки
+                        a(href="#") Услуги
+                    .footer__item
+                        h3 О нас
+                        a(href="#") О сервисе
+                        a(href="#") Наша команда
+                        a(href="#") Вакансии
+                        a(href="#") Инвесторы
+                    .footer__item
+                        h3 Служба поддержки
+                        a(href="#") Соглашения
+                        a(href="#") Сообщества
+                        a(href="#") Связь с нами
+                    .footer__item_big
+                        h3 подписка
+                        p Получайте специальные предложения и новости сервис
+                        +text-field(' ', 'footer__item', 'Email', 0)
+        div(class=mod+' '+'footer__end')
+            .wrapper
+                span Copyright © 2018 Toxin отель. Все права зачищены.
+                .footer__social
+                    .twiter
+                    .facebook
+                    .instagram
+    else
+        div(class=mod+' '+'footer footer_no-link')
+            .wrapper
+                .footer__content
+                    .logo
+                    p Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam pellentesque aliquam curabitur cociis
+                    .footer__social
+                        .twiter
+                        .facebook
+                        .instagram
