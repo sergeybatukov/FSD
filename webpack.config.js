@@ -40,17 +40,11 @@ module.exports = {
         },
         {
             test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
-            loader: 'file-loader',
-            options:{
-                name: "[name].[ext]"
-            }
+            loader: 'file-loader?name=/fonts/[name].[ext]'
         },
         {
             test: /\.(png|jpg|gif|svg)/,
-            loader: 'file-loader',
-            options:{
-                name: "[name].[ext]"
-            }
+            loader: 'file-loader?name=/img/[name].[ext]'
         },
         {
             test: /\.css/,
@@ -78,7 +72,7 @@ module.exports = {
                 MiniCssExtractPlagin.loader, 
                 {
                     loader: "css-loader",
-                    options: {sourceMap: true}
+                    options: {sourceMap: true, url: false}
                 },
                 {
                     loader: "postcss-loader",
