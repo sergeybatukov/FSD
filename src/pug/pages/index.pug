@@ -1,11 +1,17 @@
 extends ../layout/main
 block content
     .content
+        h1 Sergey Batukov
         .navigation
-            h1 Sergey Batukov
-            button.button.button__hollow__inactive COLORS & TYPE
-            button.button.button__hollow__inactive UI ELEMENTS
-            button.button(onClick='location.href="cards.html"') CARDS
-            button.button(onClick='location.href="headers-footers.html"') HEADERS & FOOTERS
-            button.button(onClick='location.href="landing_page.html"') LANDING PAGE
-            button.button(onClick='location.href="search_room.html"') SEARCH ROOM
+            .navigation__item(style="opacity: 0.5")
+                h3 COLORS & TYPE
+            .navigation__item(style="opacity: 0.5")
+                h3 UI ELEMENTS
+            .navigation__item(style="background-image: url(../assets/img/Cards.jpg", onClick='location.href="cards.html"')
+                h3 CARDS
+            .navigation__item(style="background-image: url(../assets/img/Headers_Footers.jpg",onClick='location.href="headers-footers.html"')
+                h3 HEADERS & FOOTERS
+            .navigation__item(style="background-image: url(../assets/img/Landing_page.png",onClick='location.href="landing_page.html"')
+                h3 LANDING PAGE
+            .navigation__item(style="background-image: url(../assets/img/Filter.png",onClick='location.href="search_room.html"')
+                h3 SEARCH ROOM
