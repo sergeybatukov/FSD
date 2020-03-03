@@ -1,0 +1,26 @@
+extends ../layout/main
+block content
+    +header('headers-footers', 0)
+    .search-room
+        .wrapper
+            .search-room__filter
+                +date-range('UI')
+                +dropdown('UI', 'guests')
+                +range-slider('Диапазон цен', 'UI')
+                .checkbox-buttons
+                    h3 checkbox buttons
+                    +checkbox('6', 'checkbox-buttons', 'Можно курить')
+                    +checkbox('6', 'checkbox-buttons', 'Можно с питомцами')
+                    +checkbox('6', 'checkbox-buttons', 'Можно пригласить гостей (до 10 человек)')
+                h3 Удобства
+                +dropdown('UI', ' ')
+                .checkbox-list
+                    h3(class="checkbox-list checkbox-list__header") дополнительные удобства
+                    .checkbox-list__container
+                        +checkbox('1', 'checkbox-list', 'Завтрак')
+                        +checkbox('2', 'checkbox-list', 'Письменный стол')
+                        +checkbox('3', 'checkbox-list', 'Стул для кормления')
+                        +checkbox('4', 'checkbox-list', 'Кроватка')
+                        +checkbox('5', 'checkbox-list', 'Телевизор')
+                        +checkbox('6', 'checkbox-list', 'Шампунь')
+    +footer('headers-footers', 0)

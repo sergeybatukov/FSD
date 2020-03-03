@@ -3,7 +3,7 @@
     border-radius: 4px;
     @include input_text;
     background: #FFFFFF;
-    width: 320px;
+    width: 100%;
     border: 1px solid $Dark_shade_25;
     box-sizing: border-box;
     z-index: 5;
@@ -39,7 +39,7 @@
         left: -1px;
         padding-bottom: 7px;
         background: #FFFFFF;
-        width: 320px;
+        width: 100%;
         box-sizing: border-box;
     }
     &__item{
