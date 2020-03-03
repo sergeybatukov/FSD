@@ -135,16 +135,13 @@
   margin-top: 20px;
 }
 .date-range{
-  display: flex;
+  display: grid;
+  width: 100%;
+  grid-template-columns:1fr 1fr;
+  grid-column-gap: 20px;
+  grid-auto-rows: minmax(auto);
   position: relative;
-  width: 320px;
-  h3, .start, .end, input{
-    width: 150px;
-    display: block;
-  }
-  .end {
-    margin-left: 20px;
-  }
+
 }
 .text-field__input {
   position: relative;

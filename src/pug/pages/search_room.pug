@@ -4,16 +4,16 @@ block content
     .wrapper
         .search-room
             .search-room__filter
-                +date-range('UI')
-                +dropdown('UI', 'guests')
-                +range-slider('Диапазон цен', 'UI')
+                +date-range('search-room')
+                +dropdown('search-room', 'guests')
+                +range-slider('Диапазон цен', 'search-room')
                 .checkbox-buttons
                     h3 checkbox buttons
                     +checkbox('1', 'checkbox-buttons', 'Можно курить')
                     +checkbox('2', 'checkbox-buttons', 'Можно с питомцами')
                     +checkbox('3', 'checkbox-buttons', 'Можно пригласить гостей (до 10 человек)')
                 h3 Удобства
-                +dropdown('UI', ' ')
+                +dropdown('search-room', ' ')
                 .checkbox-list
                     h3(class="checkbox-list checkbox-list__header") дополнительные удобства
                     .checkbox-list__container
@@ -27,16 +27,16 @@ block content
                 .search-room__header
                     h1 Номера, которые мы для вас подобрали
                 .search-room__cards
-                    +number_card('search-room__grid', 1)
-                    +number_card('search-room__grid', 0)
-                    +number_card('search-room__grid', 0)
-                    +number_card('search-room__grid', 0)
-                    +number_card('search-room__grid', 0)
-                    +number_card('search-room__grid', 0)
-                    +number_card('search-room__grid', 0)
-                    +number_card('search-room__grid', 0)
-                    +number_card('search-room__grid', 0)
-                    +number_card('search-room__grid', 0)
-                    +number_card('search-room__grid', 0)
-                    +number_card('search-room__grid', 0)
+                    +number_card('search-room', 1)
+                    +number_card('search-room', 0)
+                    +number_card('search-room', 0)
+                    +number_card('search-room', 0)
+                    +number_card('search-room', 0)
+                    +number_card('search-room', 0)
+                    +number_card('search-room', 0)
+                    +number_card('search-room', 0)
+                    +number_card('search-room', 0)
+                    +number_card('search-room', 0)
+                    +number_card('search-room', 0)
+
     +footer('headers-footers', 0)

@@ -35,13 +35,18 @@ $(document).ready(function() {
     // кнопка "применить", запись в инпуты
     $('.button__text').not('.button__text__inactive').click(function(){
         $(this).closest('.datepicker').slideToggle(400);
-        if (startDay == 0){
-            $(this).parents('.date-range').children('.start').children('.date-range__start').html('ДД.ММ.ГГГГ')
+        if ($(this).parents('.date-range').children('.start').children('.date-range__start').hasClass('date-range__start_solo')){
+            $(this).parents('.date-range').children('.start').children('.date-range__start').html(startDay + " - " + endDay)
         }
-        else {
-            $(this).parents('.date-range').children('.start').children('.date-range__start').html(startDay)
+        else{
+            if (startDay == 0){
+                $(this).parents('.date-range').children('.start').children('.date-range__start').html('ДД.ММ.ГГГГ')
+            }
+            else {
+                $(this).parents('.date-range').children('.start').children('.date-range__start').html(startDay)
+            }
+            $(this).parents('.date-range').children('.end').children('.date-range__end').html(endDay)
         }
-        $(this).parents('.date-range').children('.end').children('.date-range__end').html(endDay)
     })
 
     // кнопка "очистить"

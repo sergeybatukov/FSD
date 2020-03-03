@@ -23,4 +23,7 @@
         grid-auto-rows: max-content max-content max-content max-content;
         justify-content: right;
     }
+    &__date-range {
+        grid-template-columns:1fr;
+    }
 }

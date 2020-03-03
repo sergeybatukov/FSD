@@ -9,7 +9,7 @@ mixin hotel_number(mod)
             .hotel_number__price
                 h2 9 990₽
                 span в сутки
-        +date-range('hotel_number')
+        +date-range('hotel_number', 0)
         h3 гости
         +dropdown('hotel_number', 'guests')
         .hotel_number__options

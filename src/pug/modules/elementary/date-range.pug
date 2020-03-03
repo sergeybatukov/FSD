@@ -1,10 +1,16 @@
-mixin date-range(mod)
+mixin date-range(mod, input)
     - mod = mod+"__date-range"
     div(class=mod+" "+"date-range" readonly)
-        .start
-            h3 прибытие
-            .date-range__start.text-field__input(placeholder = 'ДД.ММ.ГГГГ', readonly)
-        .end
-            h3 выезд
-            .date-range__end.text-field__input(placeholder = 'ДД.ММ.ГГГГ', readonly)
-        .datepicker-here
+        if (input == 0)
+            .start
+                h3 прибытие
+                .date-range__start.text-field__input(placeholder = 'ДД.ММ.ГГГГ', readonly)
+            .end
+                h3 выезд
+                .date-range__end.text-field__input(placeholder = 'ДД.ММ.ГГГГ', readonly)
+            .datepicker-here
+        else
+            .start
+                h3 даты пребывания в отеле
+                .date-range__start.text-field__input.date-range__start_solo(placeholder = 'ДД.ММ.ГГГГ - ДД.ММ.ГГГГ', readonly)
+            .datepicker-here
