@@ -42,7 +42,7 @@
             display: block;
             width: 10px;
             height: 10px;
-            background: url('/assets/img/favorite_border.svg') no-repeat;
+            background: url('../assets/img/favorite_border.svg') no-repeat;
 
             position: absolute;
             top: 6px;
@@ -56,7 +56,7 @@
     border: 1px solid $Main_color;
 }
 .like-button__input:checked + .like-button__label::after {
-    background: url('/assets/img/favorite.svg') no-repeat;
+    background: url('../assets/img/favorite.svg') no-repeat;
 }
 .like-button__input:checked + .like-button__label {
     color: $Main_color;

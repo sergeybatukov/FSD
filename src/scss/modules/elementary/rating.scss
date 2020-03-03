@@ -3,10 +3,10 @@
     display: block;
     height: 24px;
     width: 120px;
-    background-image: url("/assets/img/star_border.svg");
+    background-image: url("../assets/img/star_border.svg");
     &__on {
         height: 24px;
-        background-image: url("/assets/img/star.svg");
+        background-image: url("../assets/img/star.svg");
 
     }
     &__live {
@@ -20,14 +20,14 @@
             cursor: pointer;
             width: 24px;
             height: 24px;
-            background-image: url("/assets/img/star.svg");
+            background-image: url("../assets/img/star.svg");
             background-repeat: no-repeat;
         }
     }
 }
 
 .rating__live span:hover ~ span {
-    background-image: url("/assets/img/star_border.svg");
+    background-image: url("../assets/img/star_border.svg");
     background-repeat: no-repeat;
 }
 .rating__live:hover {
