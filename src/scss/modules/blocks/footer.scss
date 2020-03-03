@@ -2,6 +2,7 @@
     width: 100%;
     background: #FFFFFF;
     box-shadow: 0px 1px 0px rgba(31, 32, 65, 0.1);
+    border: 1px solid rgba(31, 32, 65, 0.1);
     padding: 100px 0px;
     &__content{
         display: flex;
@@ -50,7 +51,6 @@
     }
     &__end {
         width: 100%;
-        margin-top: 1px;
         background: #FFFFFF;
         box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
         padding: 23px 0px;

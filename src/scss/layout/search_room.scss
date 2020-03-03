@@ -2,7 +2,25 @@
     width: 100%;
     padding-top: 30px;
     background-color: white;
+    margin-bottom: 70px;
+
+    display: grid;
+    grid-template-columns: min-content max-content ;
+    grid-column-gap: 50px;
+    grid-auto-rows: max-content;
+    justify-content: center;
     &__filter{
         width: 266px;
+    }
+    &__header{
+        margin-bottom: 20px;
+    }
+    &__cards {
+        display: grid;
+        grid-template-columns: max-content max-content max-content;
+        grid-column-gap: 12px;
+        grid-row-gap: 20px;
+        grid-auto-rows: max-content max-content max-content max-content;
+        justify-content: right;
     }
 }

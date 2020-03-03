@@ -27,7 +27,30 @@
 @import "layout/landing_page.scss";
 @import "layout/search_room.scss";
 body {
-    background-color: #F4F4F6;
+    background-color: white;
     margin: 0px;
     padding: 0px;
+}
+.home {
+    cursor: pointer;
+    top: 70px;
+    left: 70px;
+    transition: all 0.5s;
+    position: fixed;
+    z-index: 9999;
+    height: 50px;
+    width: 50px;
+    background-image: url('../assets/img/home-run.svg');
+    background-color: white;
+    background-repeat: no-repeat;
+    background-size: 40%;
+    border-radius: 10px;
+    background-position: center;
+    box-shadow: 0px 0px 10px rgba(31, 32, 65, 0.01);
+    opacity: 0.3;
+    &:hover {
+        transition: all 0.2s;
+        box-shadow: 0px 0px 50px rgba(31, 32, 65, 0.05);
+        opacity: 1;
+    }
 }
