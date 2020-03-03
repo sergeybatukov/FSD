@@ -40,17 +40,52 @@ body {
     z-index: 9999;
     height: 50px;
     width: 50px;
-    background-image: url('../assets/img/home-run.svg');
     background-color: white;
-    background-repeat: no-repeat;
-    background-size: 40%;
     border-radius: 10px;
-    background-position: center;
     box-shadow: 0px 0px 10px rgba(31, 32, 65, 0.01);
-    opacity: 0.3;
+    opacity: 1;
+    &::before{
+        content: '';
+        display: block;
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        top: 15px;
+        left: 15px;
+        background-image: url('../assets/img/menu.svg');
+    } 
+    & :last-child{
+        position: relative;
+        margin-top: 40px;
+        &::before{
+            content:'';
+            display: block;
+            position: absolute;
+            width: 150px;
+            height: 1px;
+            background-color: $Dark_shade_50;
+            top: -10px;
+        }
+    }
+    &__item {
+        transition: all 0.1s;
+        opacity: 0;
+        @include h3;
+        margin: 10px;
+        &:hover{
+            color: $Dark_shade_50  ;
+        }
+    }
     &:hover {
         transition: all 0.2s;
         box-shadow: 0px 0px 50px rgba(31, 32, 65, 0.05);
         opacity: 1;
+        height: 200px;
+        width: 170px;
+        padding: 30px;
+        .home__item{
+            transition: opacity 2s;
+            opacity: 1;
+        }
     }
 }
